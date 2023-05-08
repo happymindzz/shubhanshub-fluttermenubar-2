@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 import 'package:fluttermenubar/Contact.dart';
 import 'package:fluttermenubar/Data.dart';
 import 'package:fluttermenubar/Download.dart';
@@ -9,7 +9,7 @@ import 'package:fluttermenubar/LPV.dart';
 import 'package:fluttermenubar/Master.dart';
 import 'package:fluttermenubar/Payroll.dart';
 import 'package:fluttermenubar/Second.dart';
-import 'package:fluttermenubar/Settlements.dart';
+import 'package:fluttermenubar/settlements.dart';
 import 'package:fluttermenubar/Support.dart';
 import 'package:fluttermenubar/Team.dart';
 
@@ -59,7 +59,7 @@ class MyMenuBar extends StatelessWidget {
                         child: const MenuAcceleratorLabel('&Contact'),
                       ),
                     ],
-                    child: const MenuAcceleratorLabel('&Home'),
+                    child: const MenuAcceleratorLabel('Home'),
                   ),
                   SubmenuButton(
                     menuChildren: <Widget>[
@@ -521,6 +521,12 @@ class MyMenuBar extends StatelessWidget {
                     ],
                     child: const MenuAcceleratorLabel('&Windows'),
                   ),
+                  SubmenuButton(menuChildren: <Widget>[
+                    MenuItemButton(
+                      onPressed: () {
+                        Navigator.push(context, route)
+                      },
+                  ], child: child)
                   SubmenuButton(
                     menuChildren: <Widget>[
                       MenuItemButton(

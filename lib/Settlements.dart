@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+// import 'package:fluttermenubar/main.dart';
+
+// void MyMenuBar();
 
 class Settlements extends StatelessWidget {
   @override
@@ -8,8 +11,15 @@ class Settlements extends StatelessWidget {
         title: Text('Settlements Provision'),
       ),
       body: Center(
-        child: Text('This is the Settlements page'),
-      ),
+          child: ElevatedButton(
+              onPressed: () {
+                showAboutDialog(
+                  context: context,
+                  applicationName: 'Welcome to SB Tech',
+                  applicationVersion: '© 2023 All rights reserved',
+                );
+              },
+              child: Text('Jebin'))),
     );
   }
 }
